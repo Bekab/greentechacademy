@@ -9,57 +9,16 @@
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
     display: flex;
-    height: 90px;
     align-items: center;
-    /*background-color: #142d4c;*/
+    justify-content: center;
+    height: 100px;
+    background-color: #142d4c;
     color: #ececec;
     font-family: 'Nunito', sans-serif;
     font-family: 'Young Serif', serif;
-    background-image: url('../img/cloud.jpg');
-    background-position: 100% 1px;
-    z-index: 1;
 
 }
-
-header h1 {
-    padding-left: 1em;
-}
-
-header nav {
-    position: absolute;
-    color: grey;
-    right: 2em;
-}
-
-header a {
-    color: white;
-}
-
-.charts {
-    background-image: url('../img/students.jpg');
-    background-size: contain; 
-    width: 100%;
-    text-align: center;
-    margin-top: 90px;
-}
-
-.charts h2 {
-    position: absolute;
-    top: 130px;
-    width: 100%;
-    z-index: 1;
-}
-#piechart {
-    margin-top: 90px;
-    width: 900px; 
-    height: 550px;
-    margin-left: 17em;
-}
-
 
 .getinfo {
     margin-top: 2em;
@@ -139,7 +98,7 @@ tbody:nth-child(even) {
 
 div.registration {
     text-align: center;
-    
+    position: fixed;
     bottom: 0;
     padding-bottom: 2em;
     width: 100%;

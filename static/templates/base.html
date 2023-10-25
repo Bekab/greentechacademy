@@ -10,9 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Young+Serif&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="{% static 'js/chart.js' %}"></script>
-  </head>
+</head>
   <body>
     <header class="header">
         <h1>X Academy</h1>
@@ -24,12 +22,6 @@
           <a href="">Contact Us</a>
         </nav>
     </header>
-
-    <div class="charts">
-      <h2>Current students in respective cohorts</h2>
-      <div id="piechart"></div>
-    </div>
-
     {% block content %} {% endblock %}
 
     <div class="registration">
