@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from .models import Trainee
+from .models import Trainee, Report
 from .scrapper import badgefetcher
 
-# Create your views here.
 
 def index(request):
     if request.method == 'POST':
@@ -33,3 +32,6 @@ def cohort(request):
         'badges': badges
     }
     return render(request, 'cohort.html', context)
+
+def students(request):
+    return render(request, 'students.html')
