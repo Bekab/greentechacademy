@@ -21,7 +21,7 @@ header {
     font-family: 'Young Serif', serif;
     background-image: url('../img/cloud.jpg');
     background-position: 100% 1px;
-    z-index: 1;
+    z-index: 1 !important;
 
 }
 
@@ -37,6 +37,11 @@ header nav {
 
 header a {
     color: white;
+    
+}
+
+header a:hover {
+    color: teal;
 }
 
 .charts {
@@ -62,7 +67,9 @@ header a {
 
 
 .getinfo {
-    margin-top: 2em;
+    background-color:azure;
+    padding-top: 10em;
+    padding-bottom: 5em;
     text-align: center;
 }
 

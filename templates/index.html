@@ -3,7 +3,11 @@
 {% load static %}
 
 {% block content%}
-    <div class="getinfo">
+    <div class="charts" id="charts">
+        <h2>Current students in respective cohorts</h2>
+        <div id="piechart"></div>
+    </div>
+    <div class="getinfo" id="getinfo">
         <h1>Get trainee's earned badges</h1>
         <form action="{% url 'cohort' %}"> {% csrf_token %}
             <label for="credly">Enter trainee's name:</label>

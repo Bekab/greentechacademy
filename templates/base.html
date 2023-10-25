@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nedamco Follow-up</title>
+    <title>X Academy</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,22 +17,19 @@
     <header class="header">
         <h1>X Academy</h1>
         <nav>
-          <a href="">Dashboard</a> |
-          <a href="">Confirm Badges</a> |
-          <a href="">Register</a> |
+          <a href="#charts">Dashboard</a> |
+          <a href="#getinfo">Confirm Badges</a> |
+          <a href="#registration">Register</a> |
           <a href="">Weekly Reports</a> |
           <a href="">Contact Us</a>
         </nav>
     </header>
 
-    <div class="charts">
-      <h2>Current students in respective cohorts</h2>
-      <div id="piechart"></div>
-    </div>
+
 
     {% block content %} {% endblock %}
 
-    <div class="registration">
+    <div class="registration" id="registration">
         <h2 class="regh1">Register trainees here:</h2>
         <div class="form">
             <form action="{% url 'index' %}" method="POST"> {% csrf_token %}
