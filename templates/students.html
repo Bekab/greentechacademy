@@ -18,8 +18,8 @@
     <header class="header">
         <h1>X Academy</h1>
         <nav>
-          <a href="#charts">Dashboard</a> |
-   
+          <a href="#charts">Resources</a> |
+          <a href="#charts">Help</a>
         </nav>
     </header>
 
@@ -27,27 +27,38 @@
         <h2>Weekly Report Form</h2>
         <form>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="name" required="">
             <label>Full name</label>
           </div>
           <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Cohort</label>
+            <div id="dropdown">
+              <select name="cohort" id="cohort" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="moms">Moms</option>
+                <option value="cheetah">Cheetah</option>
+              </select>
+            </div>
+            <label for="cohort">Cohort</label>
           </div>
           <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Report Week</label>
+            <div id="dropdown">
+              <select name="week" id="week" required>
+                <option value="{{ week.report_week }}">{{ week.report_week }}</option>
+              </select>
+            </div>
+            <label for="week">Report Week</label>
           </div>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="results" required="">
             <label>Achieved Results</label>
           </div>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="challenges" required="">
             <label>Challenges</label>
           </div>
           <div class="user-box">
-            <input type="text" name="" required="">
+            <input type="text" name="plans" required="">
             <label>Plans for coming week</label>
           </div>
           <a href="#">

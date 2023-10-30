@@ -26,7 +26,18 @@
         </nav>
     </header>
 
-    <h2>Responsive Table</h2>
+    <div class="reportweek">
+        <div class="registration" id="registration">
+            <h2 class="regh1">Set report week here:</h2>
+            <div class="form">
+                <form action="{% url 'reports' %}" method="POST"> {% csrf_token %}
+                    <label for="week">Report week:</label>
+                    <input type="text" id="week" name="week" required>
+                    <button type="button" class="btn btn-dark"><input type="submit" style="color: white; border: none;"></button>
+                </form>
+            </div>
+    </div>
+    <h2>{{ week.report_week }} Reports</h2>
     <div class="table-wrapper">
         <table class="fl-table">
             <thead>

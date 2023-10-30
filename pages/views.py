@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Trainee, Report
+from .models import Trainee, Report, Reportweek
 from .scrapper import badgefetcher
 
 
@@ -21,7 +21,11 @@ def cohort(request):
     return render(request, 'cohort.html', context)
 
 def students(request):
-    return render(request, 'students.html')
+    week = Reportweek.objects.all().last()
+    context = {
+        'week': week
+    }
+    return render(request, 'students.html', context)
 
 def profiles(request):
     trainees = Trainee.objects.all()
@@ -45,4 +49,15 @@ def registration(request):
     return render(request, 'registration.html')
 
 def reports(request):
-    return render(request, 'reports.html')
+    if request.method == 'POST':
+        week = request.POST['week']
+
+        new_week = Reportweek(report_week=week)
+        print(new_week)
+        new_week.save()
+    current_week = Reportweek.objects.all().last()
+    print(current_week.report_week)
+    context = {
+        'week': current_week
+    }
+    return render(request, 'reports.html', context)
