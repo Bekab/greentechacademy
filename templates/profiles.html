@@ -6,7 +6,7 @@
 
 <div class="getinfo" id="getinfo">
     <h1>Get trainee's earned badges</h1>
-    <form action="{% url 'cohort' %}"> {% csrf_token %}
+    <form action="{% url 'badges' %}"> {% csrf_token %}
         <label for="credly">Enter trainee's name:</label>
         <input type="text" id="name" name="name" required>
         <input type="submit">

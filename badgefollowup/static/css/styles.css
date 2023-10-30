@@ -51,7 +51,7 @@ header a:hover {
 }
 
 .charts {
-    background-image: url('../img/students.jpg');
+    background-image: url('../img/coding2.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     width: 100%;
@@ -61,6 +61,8 @@ header a:hover {
 
 .charts h2 {
     position: absolute;
+    text-align: left;
+    padding-left: 4em;
     top: 130px;
     width: 100%;
     z-index: 1;
@@ -68,7 +70,7 @@ header a:hover {
 #piechart {
     width: 900px; 
     height: 550px;
-    margin-left: 17em;
+    /*margin-left: 17vw;*/
 }
 
 

@@ -15,7 +15,7 @@ class Report(models.Model):
     cohort = models.CharField(max_length=50)
     report_week = models.CharField(max_length=50)
     results = models.CharField(max_length=500)
-    challanges = models.CharField(max_length=500)
+    challenges = models.CharField(max_length=500)
     plan = models.CharField(max_length=500)
 
     def __str__(self):

@@ -18,14 +18,15 @@
     <header class="header">
         <h1>X Academy</h1>
         <nav>
-          <a href="#charts">Resources</a> |
-          <a href="#charts">Help</a>
+          <a href="{% url 'students' %}">Report</a> |
+          <a href="{% url 'resources' %}">Resources</a> |
+          <a href="{% url 'help' %}">Help</a>
         </nav>
     </header>
 
     <div class="login-box">
         <h2>Weekly Report Form</h2>
-        <form>
+        <form action="{% url 'students' %}" method="POST">
           <div class="user-box">
             <input type="text" name="name" required="">
             <label>Full name</label>
@@ -61,11 +62,11 @@
             <input type="text" name="plans" required="">
             <label>Plans for coming week</label>
           </div>
-          <a href="#">
+          <a>
             <span></span>
             <span></span>
             <span></span>
-            Submit
+            <input type="submit" style="color: white;">
           </a>
         </form>
       </div>
