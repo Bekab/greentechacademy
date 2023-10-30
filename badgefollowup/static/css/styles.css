@@ -21,7 +21,7 @@ header {
     align-items: center;
     /*background-color: #142d4c;*/
     color: #ececec;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: 'Young Serif', serif;
     background-image: url('../img/cloud.jpg');
     background-repeat: no-repeat;
@@ -180,6 +180,17 @@ div.registration select option {
 }
 
 .goback {
-    margin-top: 5em;
+    margin-top: 3em;
     text-align: center;
+}
+
+.errormessage {
+    margin-top: 150px;
+    font-size: 16px;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.errormessage h3 {
+    margin-top: 30px;
 }

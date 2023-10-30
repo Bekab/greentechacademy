@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import Trainee, Report, Reportweek
 
-# Register your models here.
+admin.site.register(Trainee)
+admin.site.register(Report)
+admin.site.register(Reportweek)
+
+

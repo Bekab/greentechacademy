@@ -4,11 +4,11 @@ google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
     var data = google.visualization.arrayToDataTable([
         ['Task', 'Hours per Day'],
-        ['AWS Male',     11],
-        ['AWS Female',      2],
-        ['Cheeta',  2],
-        ['Azure', 2],
-        ['Fast Track',    7]
+        ['Cohort A',     11],
+        ['Cohort B',      2],
+        ['Cohort C',  2],
+        ['Cohort D', 2],
+        ['Cohort E',    7]
     ]);
 
     var options = {

@@ -21,7 +21,7 @@ header {
     align-items: center;
     /*background-color: #142d4c;*/
     color: #ececec;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-family: 'Young Serif', serif;
     background-image: url('../img/cloud.jpg');
     background-repeat: no-repeat;
@@ -42,6 +42,7 @@ header nav {
 
 header a {
     color: white;
+    text-decoration: none;
     
 }
 
@@ -50,7 +51,7 @@ header a:hover {
 }
 
 .charts {
-    background-image: url('../img/students.jpg');
+    background-image: url('../img/coding2.jpg');
     background-repeat: no-repeat;
     background-size: cover; 
     width: 100%;
@@ -60,6 +61,8 @@ header a:hover {
 
 .charts h2 {
     position: absolute;
+    text-align: left;
+    padding-left: 4em;
     top: 130px;
     width: 100%;
     z-index: 1;
@@ -67,7 +70,7 @@ header a:hover {
 #piechart {
     width: 900px; 
     height: 550px;
-    margin-left: 17em;
+    /*margin-left: 17vw;*/
 }
 
 
@@ -177,6 +180,17 @@ div.registration select option {
 }
 
 .goback {
-    margin-top: 5em;
+    margin-top: 3em;
     text-align: center;
+}
+
+.errormessage {
+    margin-top: 150px;
+    font-size: 16px;
+    font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.errormessage h3 {
+    margin-top: 30px;
 }
