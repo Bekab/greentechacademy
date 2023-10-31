@@ -12,14 +12,29 @@
             <input type="text" id="name" name="name" required>
             <label for="cohort">Cohort:</label>
             <select name="cohort" id="cohort" required>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="moms">Moms</option>
-                <option value="cheetah">Cheetah</option>
+                <option value="cohort a">Cohort A</option>
+                <option value="cohort b">Cohort B</option>
+                <option value="cohort c">Cohort C</option>
+                <option value="cohort d">Cohort D</option>
             </select>
             <label for="credly">Credly link:</label>
-            <input type="text" id="credly" name="credly" required>
-            <button type="button" class="btn btn-dark"><input type="submit" style="color: white; border: none;"></button>
+            <input type="text" id="credly" name="credly" required> <br> <br>
+            <button type="button" class="btn btn-success"><input type="submit" style="color: white; border: none;"></button>
+        </form>
+    </div>
+</div>
+
+<div class="registration" id="reg">
+    <h2 class="regh1">Register resources here:</h2>
+    <div class="form" id="form">
+        <form action="{% url 'registration' %}" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="link">Link:</label>
+            <input type="text" id="link" name="link" required>
+            <label for="descreption">Description:</label>
+            <input type="text" id="description" name="description" required> <br> <br>
+            <button type="button" class="btn btn-success"><input type="submit" style="color: white; border: none;"></button>
         </form>
     </div>
 </div>

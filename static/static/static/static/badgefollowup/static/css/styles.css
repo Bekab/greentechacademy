@@ -9,7 +9,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -51,10 +51,19 @@ header a:hover {
     color: teal;
 }
 
+
 #landingpage {
+    color: white;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
-    margin-top: 3em;
+    padding-top: 9em;
+    height: 100vh;
+    width: 100%;
+    background-image: url('../img/naturetech2.jpg') !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    isolation: isolate;
 }
 
 #landingpage h1 {
@@ -68,6 +77,15 @@ header a:hover {
 #landingpage #buttons a {
     margin: 0 3em 3em 3em;
 
+}
+
+#landingpage::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgb(1, 54, 1);
+    opacity: .6;
 }
 
 .charts {
