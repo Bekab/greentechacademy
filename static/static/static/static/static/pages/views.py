@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from .models import Trainee, Report, Reportweek
+from .models import Trainee, Report, Reportweek, Resource
 from .scrapper import badgefetcher
 from django.views.decorators.csrf import csrf_exempt
+
+def landingpage(request):
+    return render(request, 'landingpage.html')
 
 def index(request):
     return render(request, 'index.html')
@@ -55,13 +58,21 @@ def profiles(request):
 @csrf_exempt
 def registration(request):
     if request.method == 'POST':
-        name = request.POST['name']
-        cohort = request.POST['cohort']
-        credly = request.POST['credly']
+        if 'credly' in request.POST.keys():
+            name = request.POST['name']
+            cohort = request.POST['cohort']
+            credly = request.POST['credly']
 
-        new_trainee = Trainee(name=name, cohort=cohort, credly=credly)
-        new_trainee.save()
+            new_trainee = Trainee(name=name, cohort=cohort, credly=credly)
+            new_trainee.save()
+        
+        if 'link' in request.POST.keys():
+            name = request.POST['name']
+            link = request.POST['link']
+            description = request.POST['description']
 
+            new_resource = Resource(name=name, link=link, description=description)
+            new_resource.save()
     return render(request, 'registration.html')
 
 @csrf_exempt
@@ -83,7 +94,12 @@ def reports(request):
     return render(request, 'reports.html', context)
 
 def resources(request):
-    return render(request, 'resources.html')
+    resources = Resource.objects.all()
+
+    context = {
+        'resources': resources
+    }
+    return render(request, 'resources.html', context)
 
 def help(request):
     return render(request, 'help.html')

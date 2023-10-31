@@ -31,6 +31,7 @@ header {
 }
 
 header h1 {
+    color: rgb(118, 250, 118);
     padding-left: 1em;
 }
 
@@ -48,6 +49,25 @@ header a {
 
 header a:hover {
     color: teal;
+}
+
+#landingpage {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-top: 3em;
+}
+
+#landingpage h1 {
+    margin-bottom: 2em;
+}
+
+#landingpage #buttons {
+    font-size: large;
+}
+
+#landingpage #buttons a {
+    margin: 0 3em 3em 3em;
+
 }
 
 .charts {
@@ -154,17 +174,22 @@ tbody:nth-child(even) {
 
 
 div.registration {
-    height: 100vh;
+    /*height: 50vh;*/
     font-family: 'Nunito', sans-serif;
     font-family: 'Young Serif', serif;
     text-align: center;
-    padding: 12em 0 5em 0;
+    padding: 8em 0 1em 0;
     width: 100%;
-    height: 100%;
+    /*height: 50%;*/
     background-color: azure;
     color: #321E1E;
     
 }
+#reg {
+    background-color: azure;
+    padding: 3em 0 3em 0;
+}
+
 div.registration h2 {
     margin-top: 1em;
     margin-bottom: 1em;

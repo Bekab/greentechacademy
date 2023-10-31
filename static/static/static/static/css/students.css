@@ -14,19 +14,20 @@ html {
     top: 50%;
     left: 50%;
     width: 600px;
-    padding: 40px;
-    padding-top: 20px;
+    padding: 20px 40px 20px 40px;
     transform: translate(-50%, -50%);
     background: rgba(0,0,0,.5);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+    margin-bottom: 2em;
   }
   
   .login-box h2 {
-    margin: 0 0 15px;
+    margin: 0 0 10px;
     padding: 0;
     color: #fff;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
   }
   
@@ -34,7 +35,12 @@ html {
     position: relative;
   }
   
-  .login-box .user-box input {
+  .login-box #dropdown {
+    margin-top: 0.5em;
+  }
+
+  
+  .login-box .user-box input, .login-box .user-box select {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
@@ -45,6 +51,19 @@ html {
     outline: none;
     background: transparent;
   }
+
+  div#dropdown {
+    color: white;
+    padding-top: 15px;
+  }
+
+  div#dropdown select {
+    background: rgba(19, 18, 34, 0.5);
+    color: white;
+    margin-top: 10px;
+  }
+
+
   .login-box .user-box label {
     position: absolute;
     top:0;
@@ -67,14 +86,14 @@ html {
   .login-box form a {
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 10px;
     color: #03e9f4;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 40px;
+    margin-top: 5px;
     letter-spacing: 4px
   }
   
