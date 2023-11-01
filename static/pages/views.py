@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Trainee, Report, Reportweek, Resource
+from .models import Trainee, Report, Reportweek, Resource, Ticket
 from .scrapper import badgefetcher
 from django.views.decorators.csrf import csrf_exempt
 
@@ -101,5 +101,14 @@ def resources(request):
     }
     return render(request, 'resources.html', context)
 
+@csrf_exempt
 def help(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        question = request.POST['question']
+        solved = False
+
+        new_ticket = Ticket(name=name, question=question, solved=solved)
+        new_ticket.save()
+
     return render(request, 'help.html')

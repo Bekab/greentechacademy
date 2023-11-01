@@ -35,3 +35,15 @@ class Resource(models.Model):
     def __str__(self):
         return self.name
 
+class Ticket(models.Model):
+    name = models.CharField(max_length=100)
+    question = models.CharField(max_length=2000)
+    solved = models.BooleanField(default=False)
+
+    def __str__(self):
+        if self.solved == True:
+            answer = "Solved"
+        else:
+            answer = "Awaiting Response"
+        return self.name + "   ---   " + self.question + "   ---   " + answer
+
