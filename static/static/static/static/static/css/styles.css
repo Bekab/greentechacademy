@@ -59,7 +59,7 @@ header a:hover {
     padding-top: 9em;
     height: 100vh;
     width: 100%;
-    background-image: url('../img/naturetech2.jpg') !important;
+    background-image: url('../img/naturetech2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -218,8 +218,10 @@ div.registration select option {
 }
 
 .registration input, .registration select {
+    padding: 0 5px;
     color: black;
-    border: solid #9fd3c7;
+    border: solid rgb(69, 221, 69);
+    border-radius: 5px;
 }
 
 .goback {

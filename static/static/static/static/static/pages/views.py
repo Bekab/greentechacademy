@@ -7,7 +7,19 @@ def landingpage(request):
     return render(request, 'landingpage.html')
 
 def index(request):
-    return render(request, 'index.html')
+    a = int(Trainee.objects.filter(cohort='cohort a').count())
+    b = int(Trainee.objects.filter(cohort='cohort b').count())
+    c = int(Trainee.objects.filter(cohort='cohort c').count())
+    d = int(Trainee.objects.filter(cohort='cohort d').count())
+    cohorts = ['Cohort A', 'Cohort B', 'Cohort C', 'Cohort D']
+    counts = [a, b, c, d]
+
+    context = {
+        'cohorts': cohorts,
+        'counts': counts
+    }
+
+    return render(request, 'index.html', context)
 
 def badges(request):
     name = request.GET['name']

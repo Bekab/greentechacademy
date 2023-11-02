@@ -3,9 +3,35 @@
 {% load static %}
 
 {% block content%}
-    <div class="charts" id="charts">
-        <h2>Current students in respective cohorts</h2>
-        <div id="piechart"></div>
+    <div class="charts">
+        <h2>Academy Students in respective Cohorts</h2>
+        <div class="piechart">
+            <canvas id="myChart"></canvas>
+        </div>
     </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+    <script>
+        const ctx = document.getElementById('myChart');
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: {{ cohorts|safe }},
+                datasets: [{
+                    label: '# of Students',
+                    data: {{ counts|safe }},
+                    borderWidth: 1
+                }]
+            },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+        });
+  </script>
 
 {% endblock %}

@@ -7,7 +7,7 @@
 <div class="registration" id="registration">
     <h2 class="regh1">Register trainees here:</h2>
     <div class="form">
-        <form action="{% url 'registration' %}" method="POST"> {% csrf_token %}
+        <form action="{% url 'registration' %}" method="POST">
             <label for="name">Full name:</label>
             <input type="text" id="name" name="name" required>
             <label for="cohort">Cohort:</label>

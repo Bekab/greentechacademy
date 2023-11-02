@@ -8,17 +8,17 @@
     <h2 class="regh1">Register trainees here:</h2>
     <div class="form">
         <form action="{% url 'registration' %}" method="POST">
-            <label for="name">Full name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="cohort">Cohort:</label>
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Enter name..." required>
+            <label for="cohort"></label>
             <select name="cohort" id="cohort" required>
                 <option value="cohort a">Cohort A</option>
                 <option value="cohort b">Cohort B</option>
                 <option value="cohort c">Cohort C</option>
                 <option value="cohort d">Cohort D</option>
             </select>
-            <label for="credly">Credly link:</label>
-            <input type="text" id="credly" name="credly" required> <br> <br>
+            <label for="credly"></label>
+            <input type="text" id="credly" name="credly" placeholder="Enter credly link..." required> <br> <br>
             <button type="button" class="btn btn-success"><input type="submit" style="color: white; border: none;"></button>
         </form>
     </div>
@@ -28,13 +28,13 @@
     <h2 class="regh1">Register resources here:</h2>
     <div class="form" id="form">
         <form action="{% url 'registration' %}" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="link">Link:</label>
-            <input type="text" id="link" name="link" required>
-            <label for="descreption">Description:</label>
+            <label for="name"></label>
+            <input type="text" id="name" name="name" placeholder="Enter resource name..." required>
+            <label for="link"></label>
+            <input type="text" id="link" name="link" placeholder="Enter resource link..." required>
+            <label for="descreption"></label>
             <input type="text" id="description" name="description" required> <br> <br>
-            <button type="button" class="btn btn-success"><input type="submit" style="color: white; border: none;"></button>
+            <button type="button" class="btn btn-success"><input type="submit" style="color: white; border: none;" placeholder="Enter description..."></button>
         </form>
     </div>
 </div>
