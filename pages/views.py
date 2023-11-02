@@ -124,3 +124,12 @@ def help(request):
         new_ticket.save()
 
     return render(request, 'help.html')
+
+def tickets(request):
+
+    tickets = Ticket.objects.all()
+    
+    context = {
+        'tickets': tickets
+    } 
+    return render(request, 'tickets.html', context)
